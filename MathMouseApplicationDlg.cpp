@@ -653,7 +653,7 @@ void CMathMouseApplicationDlg::NumberInit()
 	ScreenToClient(&rect);
 
 	InvalidateRect(&rect); // 화면 갱신
-	UpdateWindow();
+	//UpdateWindow();
 
 	xEdit1.SetSel(0, -1, TRUE);
 	xEdit1.Clear();
