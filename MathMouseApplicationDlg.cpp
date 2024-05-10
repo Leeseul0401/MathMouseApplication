@@ -103,7 +103,6 @@ BEGIN_MESSAGE_MAP(CMathMouseApplicationDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_RADIO4, &CMathMouseApplicationDlg::OnBnClickedRadio4)
 	ON_BN_CLICKED(IDC_RADIO5, &CMathMouseApplicationDlg::OnBnClickedRadio5)
 	ON_BN_CLICKED(IDC_BUTTON1, &CMathMouseApplicationDlg::OnBnClickedButton1)
-	ON_STN_CLICKED(IDC_PICCON_BOARD, &CMathMouseApplicationDlg::OnStnClickedPicconBoard)
 END_MESSAGE_MAP()
 
 
@@ -228,21 +227,6 @@ HCURSOR CMathMouseApplicationDlg::OnQueryDragIcon()
 
 
 
-void CMathMouseApplicationDlg::OnBnClickedRadio4()
-{
-	NumberInit();
-
-	MessageStr(radioCheck4);
-/*
-	CString str;
-	radioCheck4.GetWindowTextW(str);
-	CString result;
-	result.Format(_T("Radio Box ---- %s"), str);
-	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);*/
-
-}
-
 void CMathMouseApplicationDlg::WriteEdit(CPoint clientPnt, int count)
 {
 	CString xStr;
@@ -339,25 +323,19 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 		{
 			xEdit1.SetWindowTextW(xStr);
 			yEdit1.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 2)
 		{
 			xEdit2.SetWindowTextW(xStr);
 			yEdit2.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 3)
 		{
 			xEdit3.SetWindowTextW(xStr);
 			yEdit3.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 			CalculatePerpendicularFoot();
 		}
 	} 
@@ -385,25 +363,19 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 		{
 			xEdit1.SetWindowTextW(xStr);
 			yEdit1.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 2)
 		{
 			xEdit2.SetWindowTextW(xStr);
 			yEdit2.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 3)
 		{
 			xEdit3.SetWindowTextW(xStr);
 			yEdit3.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 			CalculatePerpendicularFoot();
 		}
 		
@@ -423,25 +395,19 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 		{
 			xEdit1.SetWindowTextW(xStr);
 			yEdit1.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 2)
 		{
 			xEdit2.SetWindowTextW(xStr);
 			yEdit2.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 3)
 		{
 			xEdit3.SetWindowTextW(xStr);
 			yEdit3.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 			
 		}
 	}
@@ -456,25 +422,19 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 		{
 			xEdit1.SetWindowTextW(xStr);
 			yEdit1.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 2)
 		{
 			xEdit2.SetWindowTextW(xStr);
 			yEdit2.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 3)
 		{
 			xEdit3.SetWindowTextW(xStr);
 			yEdit3.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 			CalculatePerpendicularFoot();
 		}
 	}
@@ -489,25 +449,19 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 		{
 			xEdit1.SetWindowTextW(xStr);
 			yEdit1.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 2)
 		{
 			xEdit2.SetWindowTextW(xStr);
 			yEdit2.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 		}
 		else if (count == 3)
 		{
 			xEdit3.SetWindowTextW(xStr);
 			yEdit3.SetWindowTextW(yStr);
-			listBox.AddString(xStr);
-			listBox.AddString(yStr);
-			listBox.SetTopIndex(listBox.GetCount() - 1);
+			ListBoxAddString(xStr, yStr, listBox);
 			CalculatePerpendicularFoot();
 		}
 	}
@@ -593,10 +547,7 @@ void CMathMouseApplicationDlg::OnLButtonDown(UINT nFlags, CPoint point)
 
 void CMathMouseApplicationDlg::OnLButtonUp(UINT nFlags, CPoint point)
 {
-	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
-
 	CDialogEx::OnLButtonUp(nFlags, point);
-	
 }
 
 HBRUSH CMathMouseApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
@@ -616,8 +567,6 @@ HBRUSH CMathMouseApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor
 void CMathMouseApplicationDlg::OnBnClickedRadio1()
 {
 	NumberInit();
-
-
 	MessageStr(radioCheck1);
 }
 
@@ -630,12 +579,6 @@ void CMathMouseApplicationDlg::OnBnClickedRadio2()
 
 	MessageStr(radioCheck2);
 	
-	/*CString str;
-	radioCheck2.GetWindowTextW(str);
-	CString result;
-	result.Format(_T("Radio Box ---- %s"), str);
-	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);*/
 }
 
 void CMathMouseApplicationDlg::OnBnClickedRadio3()
@@ -646,14 +589,22 @@ void CMathMouseApplicationDlg::OnBnClickedRadio3()
 	//DrawCrossLine(&dc);
 
 	MessageStr(radioCheck3);
-/*
-	CString str;
-	radioCheck3.GetWindowTextW(str);
-	CString result;
-	result.Format(_T("Radio Box ---- %s"), str);
-	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);*/
+}
 
+void CMathMouseApplicationDlg::OnBnClickedRadio4()
+{
+	NumberInit();
+
+	MessageStr(radioCheck4);
+
+}
+
+void CMathMouseApplicationDlg::OnBnClickedRadio5()
+{
+
+	NumberInit();
+
+	MessageStr(radioCheck5);
 }
 
 void CMathMouseApplicationDlg::NumberInit()
@@ -688,21 +639,6 @@ void CMathMouseApplicationDlg::NumberInit()
 	m_arrDPoints.RemoveAll();
 }
 
-void CMathMouseApplicationDlg::OnBnClickedRadio5()
-{
-
-	NumberInit();
-
-	MessageStr(radioCheck5);
-/*
-	CString str;
-	radioCheck5.GetWindowTextW(str);
-	CString result;
-	result.Format(_T("Radio Box ---- %s"), str);
-	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);*/
-
-}
 
 void CMathMouseApplicationDlg::CalculatePerpendicularFoot()
 {
@@ -848,6 +784,13 @@ void CMathMouseApplicationDlg::MessageStr(CButton& radioButton)
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
+	listBox.SetTopIndex(listBox.GetCount() - 1);
+}
+
+void CMathMouseApplicationDlg::ListBoxAddString(CString xStr, CString yStr, CListBox& listBox)
+{
+	listBox.AddString(xStr);
+	listBox.AddString(yStr);
 	listBox.SetTopIndex(listBox.GetCount() - 1);
 }
 
@@ -1120,7 +1063,3 @@ void CMathMouseApplicationDlg::DrawCircle(CDC* pDC, const std::vector<CPoint>& p
 
 }
 
-void CMathMouseApplicationDlg::OnStnClickedPicconBoard()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-}

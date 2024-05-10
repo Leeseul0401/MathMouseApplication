@@ -57,7 +57,8 @@ public:
 	afx_msg void OnBnClickedRadio3();
 	afx_msg void OnBnClickedRadio4();
 	afx_msg void OnBnClickedRadio5();
-	
+
+	afx_msg void OnBnClickedButton1();
 	// 마우스 이벤트
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
@@ -80,13 +81,11 @@ public:
 	void DrawRotatedTriangle(CDC* pDC, INT degree);
 	void DrawCircle(CDC* pDC, const std::vector<CPoint>& points);
 
-	// edit 박스에 좌표 출력
 	void WriteEdit(CPoint clientPnt, int count);
-	
-	// 화면에 선 긋기
 	void DrawLinearRegression(CDC* pDC, const std::vector<CPoint>& points);
 	void MessageStr(CButton& radioButton);
-	
+	void ListBoxAddString(CString xStr, CString yStr, CListBox& listBox);
+
 	CEdit xEdit;
 	CEdit yEdit;
 	CEdit xEdit1;
@@ -110,7 +109,6 @@ public:
 	CButton radioCheck1;
 	CButton radioCheck2;
 	CButton RotateButton;
-	afx_msg void OnBnClickedButton1();
 	
 	CEdit angleEdit;
 	CStatic m_picBoard;
@@ -118,5 +116,4 @@ public:
 	CButton radioCheck3;
 	CButton radioCheck4;
 	CButton radioCheck5;
-	afx_msg void OnStnClickedPicconBoard();
 };
