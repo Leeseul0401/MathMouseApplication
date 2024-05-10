@@ -231,6 +231,14 @@ HCURSOR CMathMouseApplicationDlg::OnQueryDragIcon()
 void CMathMouseApplicationDlg::OnBnClickedRadio4()
 {
 	NumberInit();
+
+	CString str;
+	radioCheck4.GetWindowTextW(str);
+	CString result;
+	result.Format(_T("Radio Box ---- %s"), str);
+	listBox.InsertString(-1, result);
+	listBox.SetTopIndex(listBox.GetCount() - 1);
+
 }
 
 void CMathMouseApplicationDlg::WriteEdit(CPoint clientPnt, int count)
@@ -638,11 +646,12 @@ void CMathMouseApplicationDlg::OnBnClickedRadio3()
 	//DrawCrossLine(&dc);
 
 	CString str;
-	radioCheck2.GetWindowTextW(str);
+	radioCheck3.GetWindowTextW(str);
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
 	listBox.SetTopIndex(listBox.GetCount() - 1);
+
 }
 
 void CMathMouseApplicationDlg::NumberInit()
@@ -681,6 +690,14 @@ void CMathMouseApplicationDlg::OnBnClickedRadio5()
 {
 
 	NumberInit();
+
+	CString str;
+	radioCheck5.GetWindowTextW(str);
+	CString result;
+	result.Format(_T("Radio Box ---- %s"), str);
+	listBox.InsertString(-1, result);
+	listBox.SetTopIndex(listBox.GetCount() - 1);
+
 }
 
 void CMathMouseApplicationDlg::CalculatePerpendicularFoot()
