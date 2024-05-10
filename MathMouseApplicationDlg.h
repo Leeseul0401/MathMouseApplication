@@ -85,7 +85,7 @@ public:
 	
 	// 화면에 선 긋기
 	void DrawLinearRegression(CDC* pDC, const std::vector<CPoint>& points);
-	
+	void MessageStr(CButton& radioButton);
 	
 	CEdit xEdit;
 	CEdit yEdit;

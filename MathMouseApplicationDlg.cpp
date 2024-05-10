@@ -232,12 +232,14 @@ void CMathMouseApplicationDlg::OnBnClickedRadio4()
 {
 	NumberInit();
 
+	MessageStr(radioCheck4);
+/*
 	CString str;
 	radioCheck4.GetWindowTextW(str);
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);
+	listBox.SetTopIndex(listBox.GetCount() - 1);*/
 
 }
 
@@ -615,12 +617,8 @@ void CMathMouseApplicationDlg::OnBnClickedRadio1()
 {
 	NumberInit();
 
-	CString str;
-	radioCheck1.GetWindowTextW(str);
-	CString result;
-	result.Format(_T("Radio Box ---- %s"), str);
-	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);
+
+	MessageStr(radioCheck1);
 }
 
 void CMathMouseApplicationDlg::OnBnClickedRadio2()
@@ -630,12 +628,14 @@ void CMathMouseApplicationDlg::OnBnClickedRadio2()
 	CClientDC dc(this);
 	DrawCrossLine(&dc);
 
-	CString str;
+	MessageStr(radioCheck2);
+	
+	/*CString str;
 	radioCheck2.GetWindowTextW(str);
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);
+	listBox.SetTopIndex(listBox.GetCount() - 1);*/
 }
 
 void CMathMouseApplicationDlg::OnBnClickedRadio3()
@@ -645,12 +645,14 @@ void CMathMouseApplicationDlg::OnBnClickedRadio3()
 	CClientDC dc(this);
 	//DrawCrossLine(&dc);
 
+	MessageStr(radioCheck3);
+/*
 	CString str;
 	radioCheck3.GetWindowTextW(str);
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);
+	listBox.SetTopIndex(listBox.GetCount() - 1);*/
 
 }
 
@@ -691,12 +693,14 @@ void CMathMouseApplicationDlg::OnBnClickedRadio5()
 
 	NumberInit();
 
+	MessageStr(radioCheck5);
+/*
 	CString str;
 	radioCheck5.GetWindowTextW(str);
 	CString result;
 	result.Format(_T("Radio Box ---- %s"), str);
 	listBox.InsertString(-1, result);
-	listBox.SetTopIndex(listBox.GetCount() - 1);
+	listBox.SetTopIndex(listBox.GetCount() - 1);*/
 
 }
 
@@ -835,6 +839,16 @@ void  CMathMouseApplicationDlg::DrawRotatedTriangle(CDC* pDC, INT degree)
 	}
 	
 	DrawTriangle(m_points[0], m_points[1], m_points[2], pDC);
+}
+
+void CMathMouseApplicationDlg::MessageStr(CButton& radioButton)
+{
+	CString str;
+	radioButton.GetWindowTextW(str);
+	CString result;
+	result.Format(_T("Radio Box ---- %s"), str);
+	listBox.InsertString(-1, result);
+	listBox.SetTopIndex(listBox.GetCount() - 1);
 }
 
 void CMathMouseApplicationDlg::OnBnClickedButton1()
